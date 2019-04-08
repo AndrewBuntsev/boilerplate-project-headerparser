@@ -10,6 +10,7 @@ var app = express();
 var cors = require('cors');
 app.use(cors({optionSuccessStatus: 200}));  // some legacy browsers choke on 204
 
+
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
@@ -24,9 +25,14 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+// header parser API endpoint... 
+app.get("/api/whoami", function (req, res) {
+  res.json({'apiaddress': req.ip, 'language': req.headers['accept-language'], 'software': req.headers['user-agent']});
+});
+
 
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
+var listener = app.listen(/*process.env.PORT*/12345, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });

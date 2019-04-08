@@ -7,15 +7,15 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
-		"express": "^5.0.0-alpha.2",
-		"cors": "^2.8.1"
+		"cors": "^2.8.1",
+		"express": "^5.0.0-alpha.2"
 	},
 	"engines": {
 		"node": "4.4.5"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://hyperdev.com/#!/project/welcome-project"
+		"url": "https://github.com/AndrewBuntsev/boilerplate-project-headerparser"
 	},
 	"keywords": [
 		"node",
